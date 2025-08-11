@@ -5,8 +5,8 @@ import Navbar from '../Component/Navbar';
 const Mainlayout = () => {
     return (
         <div>
-            <header className='bg-black sticky top-0 z-50'>
-                <header className='max-w-7xl xl:mx-auto xl:px-2 lg:px-6 mx-3'>
+            <header className='bg-black sticky top-0 z-50 border-b-1 border-[#383837]'>
+                <header className='max-w-8xl xl:mx-auto xl:px-9 lg:px-6 mx-3'>
                     <Navbar></Navbar>
                 </header>
             </header>
