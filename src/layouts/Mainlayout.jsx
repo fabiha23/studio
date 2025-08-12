@@ -12,7 +12,7 @@ const Mainlayout = () => {
                 </header>
             </header>
             <Outlet></Outlet>
-            <footer className='bg-black opacity-95'>
+            <footer className='bg-black'>
                 <footer className='max-w-7xl xl:mx-auto xl:px-2 lg:px-6 mx-3'>
                     <Footer></Footer>
                 </footer>

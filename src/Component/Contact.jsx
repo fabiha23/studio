@@ -32,7 +32,7 @@ const Contact = () => {
 
   return (
     <section id="contact" className="min-h-[calc(100vh-72px)] py-20 px-6 text-[#cec0a7]">
-      <div className="max-w-6xl mx-auto">
+      <div className="">
         <div className="mb-16">
           <h2 className="text-5xl md:text-6xl font-bold tracking-tight mb-2">Get In Touch</h2>
           <div className="w-20 h-1 bg-[#cec0a7]"></div>

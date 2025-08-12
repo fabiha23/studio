@@ -4,7 +4,7 @@ import { FaGithub, FaLinkedin, FaFacebook } from "react-icons/fa";
 
 const Banner = () => {
   return (
-    <section className="min-h-[calc(100vh-72px)] text-[#cec0a7] px-6 pt-8 justify-center relative">
+    <section id="banner" className="min-h-[calc(100vh-72px)] text-[#cec0a7] px-6 pt-8 justify-center relative">
       {/* Name with responsive sizing */}
       <h1 className="font-medium text-8xl md:text-9xl lg:text-[220px] leading-none my-6 bg-gradient-to-t from-black/40 to-[#cec0a7] bg-clip-text text-transparent">
         FABIHA
