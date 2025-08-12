@@ -1,47 +1,99 @@
-import React from "react";
-import logo from "../../public/logo.png";
+import React, { useState } from "react";
+import logo from "/logo.png";
 import { Link as Links } from "react-scroll";
 import { Link } from "react-router";
+import { FiMenu, FiX } from "react-icons/fi";
 
 const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const toggleMenu = () => setIsOpen(!isOpen);
+
+  const navItems = ["about", "skills", "education", "projects", "contact"];
+
   return (
-    <div className="text-[#cec0a7] py-4 px-7">
-      <div className="flex justify-between items-center">
-        <Link to='/'><img className="w-9 hover:rotate-360 transition-transform duration-700 cursor-pointer" src={logo} alt="Logo" /></Link>
+    <nav className="text-[#cec0a7] py-4 px-7 relative z-50">
+      {/* Desktop Navbar - visible md and above */}
+      <div className="hidden md:flex justify-between items-center">
+        <Link to="/">
+          <img
+            className="w-9 hover:rotate-360 transition-transform duration-700 cursor-pointer"
+            src={logo}
+            alt="Logo"
+          />
+        </Link>
+
         <ul className="flex gap-9 text-xl">
-          <Links to="about" smooth={true} duration={500} className="cursor-pointer">
-            <li className="relative group">
-              About
-              <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-[#cec0a7] transition-all duration-300 group-hover:w-full"></span>
-            </li>
-          </Links>
-          <Links to="skills" smooth={true} duration={500} className="cursor-pointer">
-            <li className="relative group">
-              Skills
-              <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-[#cec0a7] transition-all duration-300 group-hover:w-full"></span>
-            </li>
-          </Links>
-          <Links to="education" smooth={true} duration={500} className="cursor-pointer">
-            <li className="relative group">
-              Education
-              <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-[#cec0a7] transition-all duration-300 group-hover:w-full"></span>
-            </li>
-          </Links>
-          <Links to="projects" smooth={true} duration={500} className="cursor-pointer">
-            <li className="relative group">
-              Projects
-              <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-[#cec0a7] transition-all duration-300 group-hover:w-full"></span>
-            </li>
-          </Links>
-          <Links to="contact" smooth={true} duration={500} className="cursor-pointer">
-            <li className="relative group">
-              Contact
-              <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-[#cec0a7] transition-all duration-300 group-hover:w-full"></span>
-            </li>
-          </Links>
+          {navItems.map((section) => (
+            <Links
+              key={section}
+              to={section}
+              smooth={true}
+              duration={500}
+              className="cursor-pointer"
+            >
+              <li className="relative group">
+                {section.charAt(0).toUpperCase() + section.slice(1)}
+                <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-[#cec0a7] transition-all duration-300 group-hover:w-full"></span>
+              </li>
+            </Links>
+          ))}
         </ul>
       </div>
-    </div>
+
+      {/* Mobile Hamburger Button - visible below md */}
+      <div className="md:hidden flex justify-between items-center">
+        <Link to="/">
+          <img
+            className="w-9 hover:rotate-360 transition-transform duration-700 cursor-pointer"
+            src={logo}
+            alt="Logo"
+          />
+        </Link>
+
+        <button
+          className="text-2xl focus:outline-none"
+          onClick={toggleMenu}
+          aria-label="Toggle Menu"
+        >
+          {isOpen ? <FiX /> : <FiMenu />}
+        </button>
+      </div>
+
+      {/* Mobile Menu */}
+      <div
+        className={`fixed top-0 right-0 h-full w-64 bg-[#0f0f0f]/95 z-50 transform transition-transform duration-300 ease-in-out
+          ${isOpen ? "translate-x-0" : "translate-x-full"} md:hidden
+        `}
+      >
+        <div className="flex justify-end p-4">
+          <button
+            onClick={toggleMenu}
+            className="text-3xl text-[#cec0a7] focus:outline-none"
+            aria-label="Close Menu"
+          >
+            <FiX />
+          </button>
+        </div>
+
+        <nav className="flex flex-col items-center space-y-8 mt-10">
+          {navItems.map((section) => (
+            <Links
+              key={section}
+              to={section}
+              smooth={true}
+              duration={500}
+              className="cursor-pointer text-2xl"
+              onClick={() => setIsOpen(false)}
+            >
+              <div className="relative group py-2">
+                {section.charAt(0).toUpperCase() + section.slice(1)}
+                <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-[#cec0a7] transition-all duration-300 group-hover:w-full"></span>
+              </div>
+            </Links>
+          ))}
+        </nav>
+      </div>
+    </nav>
   );
 };
 
