@@ -4,9 +4,9 @@ import { FaGithub, FaLinkedin, FaFacebook } from "react-icons/fa";
 
 const Banner = () => {
   return (
-    <section className="min-h-[calc(100vh-72px)] text-[#D1D1C7] px-6 pt-8 justify-center relative">
+    <section className="min-h-[calc(100vh-72px)] text-[#cec0a7] px-6 pt-8 justify-center relative">
       {/* Name with responsive sizing */}
-      <h1 className="font-medium text-8xl md:text-9xl lg:text-[220px] leading-none my-6 bg-gradient-to-t from-black to-[#e8e8e3] bg-clip-text text-transparent">
+      <h1 className="font-medium text-8xl md:text-9xl lg:text-[220px] leading-none my-6 bg-gradient-to-t from-black/40 to-[#cec0a7] bg-clip-text text-transparent">
         FABIHA
       </h1>
 
@@ -25,7 +25,7 @@ const Banner = () => {
         <a
   href="/resume.pdf"
   download="Fabiha_Resume.pdf"
-  className="bg-[#D1D1C7] hover:bg-[#e0e0d8] text-lg md:text-xl font-bold text-black py-2 px-5 rounded-full flex items-center gap-1 transition-all mt-8 w-fit cursor-pointer hover:scale-101 duration-300 will-change-transform group"
+  className="bg-[#cec0a7] hover:bg-[#e0e0d8] text-lg md:text-xl font-bold text-black py-2 px-5 rounded-full flex items-center gap-1 transition-all mt-8 w-fit cursor-pointer hover:scale-101 duration-300 will-change-transform group"
 >
   Download Resume
   <FiArrowUpRight
@@ -42,7 +42,7 @@ const Banner = () => {
           href="https://github.com/fabiha23"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-[#D1D1C7] hover:text-white transition-all opacity-90 hover:scale-105 duration-300"
+          className="text-[#cec0a7] hover:text-white transition-all hover:scale-105 duration-300"
         >
           <FaGithub size={28} />
         </a>
@@ -50,7 +50,7 @@ const Banner = () => {
           href="https://linkedin.com"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-[#D1D1C7] hover:text-white transition-all hover:scale-105 duration-300 opacity-90"
+          className="text-[#cec0a7] hover:text-white transition-all hover:scale-105 duration-300 "
         >
           <FaLinkedin size={28} />
         </a>
@@ -58,7 +58,7 @@ const Banner = () => {
           href="https://facebook.com/fabiha.amatullah.2024"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-[#D1D1C7] hover:text-white transition-all hover:scale-105 duration-300 opacity-90"
+          className="text-[#cec0a7] hover:text-white transition-all hover:scale-105 duration-300"
         >
           <FaFacebook size={28} />
         </a>
