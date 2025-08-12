@@ -11,7 +11,7 @@ const Navbar = () => {
   const navItems = ["about", "skills", "education", "projects", "contact"];
 
   return (
-    <nav className="text-[#cec0a7] py-4 px-7 relative z-50">
+    <nav id="navbar" className="text-[#cec0a7] py-4 px-7 relative z-50">
       {/* Desktop Navbar - visible md and above */}
       <div className="hidden md:flex justify-between items-center">
         <Link to="/">
@@ -51,7 +51,7 @@ const Navbar = () => {
         </Link>
 
         <button
-          className="text-2xl focus:outline-none"
+          className="text-2xl focus:outline-none cursor-pointer"
           onClick={toggleMenu}
           aria-label="Toggle Menu"
         >
@@ -61,21 +61,21 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       <div
-        className={`fixed top-0 right-0 h-full w-64 bg-[#0f0f0f]/95 z-50 transform transition-transform duration-300 ease-in-out
+        className={`fixed top-0 right-0 h-full w-1/2 bg-transparent backdrop-blur-lg z-50 transform transition-transform duration-300 ease-in-out
           ${isOpen ? "translate-x-0" : "translate-x-full"} md:hidden
         `}
       >
         <div className="flex justify-end p-4">
           <button
             onClick={toggleMenu}
-            className="text-3xl text-[#cec0a7] focus:outline-none"
+            className="text-3xl text-[#cec0a7] focus:outline-none cursor-pointer"
             aria-label="Close Menu"
           >
             <FiX />
           </button>
         </div>
 
-        <nav className="flex flex-col items-center space-y-8 mt-10">
+        <nav className="flex flex-col items-start space-y-8 mt-10 ml-10">
           {navItems.map((section) => (
             <Links
               key={section}

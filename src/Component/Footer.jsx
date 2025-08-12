@@ -9,8 +9,8 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between items-center gap-8">
           {/* Left Section - Copyright */}
           <div className="text-center md:text-left">
-            <p className="opacity-90">© {new Date().getFullYear()} Your Name. All rights reserved.</p>
-            <p className="text-sm opacity-70 mt-1">Built with React and Tailwind CSS</p>
+            <p className="opacity-90">© {new Date().getFullYear()} Fabiha Amatullah. All rights reserved.</p>
+            <p className="text-sm opacity-70 mt-1">Built with React, TailwindCss</p>
           </div>
 
           {/* Middle Section - Social Links */}
@@ -83,10 +83,10 @@ const Footer = () => {
 
         {/* Scroll to Top Button */}
         <Link
-          to="banner"
+          to="navbar"
           smooth={true}
           duration={500}
-          className="absolute right-6 bottom-6 md:right-10 md:bottom-10 w-12 h-12 rounded-full bg-[#cec0a7] text-[#1a1a1a] flex items-center justify-center hover:bg-[#e0e0d8] transition-all duration-300 shadow-lg cursor-pointer"
+          className="absolute -top-16 right-0 w-12 h-12 rounded-full bg-[#cec0a7] text-[#1a1a1a] flex items-center justify-center hover:bg-[#e0e0d8] transition-all duration-300 shadow-lg cursor-pointer"
           aria-label="Scroll to top"
         >
           <FiArrowUp size={20} />
