@@ -1,0 +1,35 @@
+[
+  {
+    "id": "project1",
+    "name": "Awesome Portfolio",
+    "image": "/images/portfolio.png",
+    "mainTech": ["React", "Tailwind CSS", "GSAP"],
+    "description": "A personal portfolio website showcasing my skills, projects, and blogs.",
+    "liveLink": "https://myportfolio.com",
+    "githubLink": "https://github.com/username/portfolio-client",
+    "challenges": "Responsive design and animation synchronization.",
+    "improvements": "Add a blog section and CMS integration in future."
+  },
+  {
+    "id": "project2",
+    "name": "E-commerce Store",
+    "image": "/images/ecommerce.png",
+    "mainTech": ["React", "Redux Toolkit", "Firebase"],
+    "description": "An online store with user authentication, product filters, and payment integration.",
+    "liveLink": "https://mystore.com",
+    "githubLink": "https://github.com/username/ecommerce-client",
+    "challenges": "Handling state and optimizing product filters.",
+    "improvements": "Add more payment methods and improve UI."
+  },
+  {
+    "id": "project3",
+    "name": "Recipe App",
+    "image": "/images/recipe.png",
+    "mainTech": ["React", "Axios", "Tailwind CSS"],
+    "description": "An app to browse and save recipes with search and filter options.",
+    "liveLink": "https://myrecipeapp.com",
+    "githubLink": "https://github.com/username/recipe-client",
+    "challenges": "Managing asynchronous data fetching and caching.",
+    "improvements": "Add user accounts and recipe submissions."
+  }
+]

@@ -10,8 +10,8 @@ const About = () => {
       {/* Text Section */}
       <div className="max-w-4xl space-y-8 text-left relative z-10">
         <div className="space-y-2">
-          <h2 className="text-6xl font-bold tracking-tight">
-            About <span className="text-[#cec0a7]">Me</span>
+          <h2 className="text-5xl md:text-6xl font-bold tracking-tight mb-2">
+            About Me
           </h2>
           <div className="w-1/2 h-1 bg-gradient-to-r from-[#cec0a7] to-transparent"></div>
         </div>

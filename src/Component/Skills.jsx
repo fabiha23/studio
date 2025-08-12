@@ -20,7 +20,7 @@ const Skills = () => {
       name: "Backend",
       skills: [
         { name: "Node.js", icon: <FaNodeJs className="text-[#339933]" size={20} /> },
-        { name: "Express.js", icon: <SiExpress className="text-[#000000]" size={20} /> },
+        { name: "Express.js", icon: <SiExpress className="text-[#6a6767]" size={20} /> },
         { name: "MongoDB", icon: <SiMongodb className="text-[#47A248]" size={20} /> },
         { name: "Firebase", icon: <SiFirebase className="text-[#FFCA28]" size={20} /> },
       ],
@@ -39,7 +39,7 @@ const Skills = () => {
       <div>
         <div className="mb-16">
           <h2 className="text-5xl md:text-6xl font-bold tracking-tight mb-2">Skills</h2>
-          <div className="w-1/4 h-1 bg-gradient-to-r from-[#cec0a7] to-transparent"></div>
+          <div className="sm:w-1/4 w-1/2 h-1 bg-gradient-to-r from-[#cec0a7] to-transparent"></div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">

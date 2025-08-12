@@ -7,7 +7,7 @@ const Navbar = () => {
   return (
     <div className="text-[#cec0a7] py-4 px-7">
       <div className="flex justify-between items-center">
-        <Link to='/'><img className="w-9 hover:rotate-360 transition-transform duration-300 cursor-pointer" src={logo} alt="Logo" /></Link>
+        <Link to='/'><img className="w-9 hover:rotate-360 transition-transform duration-700 cursor-pointer" src={logo} alt="Logo" /></Link>
         <ul className="flex gap-9 text-xl">
           <Links to="about" smooth={true} duration={500} className="cursor-pointer">
             <li className="relative group">
