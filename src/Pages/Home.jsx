@@ -3,6 +3,7 @@ import Banner from '../Component/Banner';
 import About from '../Component/About';
 import Skills from '../Component/Skills';
 import Education from '../Component/Education';
+import Projects from '../Component/Projects';
 
 const Home = () => {
     return (
@@ -19,6 +20,9 @@ const Home = () => {
                 </div>
                 <div className='max-w-8xl xl:mx-auto xl:px-9 lg:px-6 mx-3'>
                     <Education></Education>
+                </div>
+                <div className='max-w-8xl xl:mx-auto xl:px-9 lg:px-6 mx-3'>
+                    <Projects></Projects>
                 </div>
             </section>
         </div>
