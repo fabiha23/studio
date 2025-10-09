@@ -1,8 +1,23 @@
-import React from 'react';
-import { FiArrowUp, FiGithub, FiLinkedin, FiTwitter, FiMail, FiFacebook } from 'react-icons/fi';
+import React, { useEffect, useState } from 'react';
+import { FiArrowUp, FiGithub, FiLinkedin, FiFacebook } from 'react-icons/fi';
 import { Link } from 'react-scroll';
 
 const Footer = () => {
+  const [showArrow, setShowArrow] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 500) {
+        setShowArrow(true);
+      } else {
+        setShowArrow(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <footer className="relative text-[#cec0a7] py-12 px-6 border-t border-[#3f3f3f]">
       <div>
@@ -15,83 +30,40 @@ const Footer = () => {
 
           {/* Middle Section - Social Links */}
           <div className="flex gap-6">
-            <a 
-          href="https://github.com/fabiha23"
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="text-2xl opacity-80 hover:opacity-100 hover:text-[#cec0a7] transition-all duration-300"
-              aria-label="GitHub"
-            >
+            <a href="https://github.com/fabiha23" target="_blank" rel="noopener noreferrer" className="text-2xl opacity-80 hover:opacity-100 hover:text-[#cec0a7] transition-all duration-300" aria-label="GitHub">
               <FiGithub />
             </a>
-            <a 
-              href="https://linkedin.com/in/yourusername" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="text-2xl opacity-80 hover:opacity-100 hover:text-[#cec0a7] transition-all duration-300"
-              aria-label="LinkedIn"
-            >
+            <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer" className="text-2xl opacity-80 hover:opacity-100 hover:text-[#cec0a7] transition-all duration-300" aria-label="LinkedIn">
               <FiLinkedin />
             </a>
-            <a 
-  href="https://facebook.com/fabiha.amatullah.2024" 
-  target="_blank" 
-  rel="noopener noreferrer"
-  className="text-2xl opacity-80 hover:opacity-100 hover:text-[#cec0a7] transition-all duration-300"
-  aria-label="Facebook"
->
-  <FiFacebook />
-</a>
+            <a href="https://facebook.com/fabiha.amatullah.2024" target="_blank" rel="noopener noreferrer" className="text-2xl opacity-80 hover:opacity-100 hover:text-[#cec0a7] transition-all duration-300" aria-label="Facebook">
+              <FiFacebook />
+            </a>
           </div>
 
           {/* Right Section - Navigation Links */}
           <div className="hidden md:flex gap-6">
-            <Link 
-              to="about" 
-              smooth={true} 
-              duration={500} 
-              className="cursor-pointer opacity-80 hover:opacity-100 transition-opacity duration-300"
-            >
-              About
-            </Link>
-            <Link 
-              to="skills" 
-              smooth={true} 
-              duration={500} 
-              className="cursor-pointer opacity-80 hover:opacity-100 transition-opacity duration-300"
-            >
-              Skills
-            </Link>
-            <Link 
-              to="projects" 
-              smooth={true} 
-              duration={500} 
-              className="cursor-pointer opacity-80 hover:opacity-100 transition-opacity duration-300"
-            >
-              Projects
-            </Link>
-            <Link 
-              to="contact" 
-              smooth={true} 
-              duration={500} 
-              className="cursor-pointer opacity-80 hover:opacity-100 transition-opacity duration-300"
-            >
-              Contact
-            </Link>
+            <Link to="about" smooth={true} duration={500} className="cursor-pointer opacity-80 hover:opacity-100 transition-opacity duration-300">About</Link>
+            <Link to="skills" smooth={true} duration={500} className="cursor-pointer opacity-80 hover:opacity-100 transition-opacity duration-300">Skills</Link>
+            <Link to="projects" smooth={true} duration={500} className="cursor-pointer opacity-80 hover:opacity-100 transition-opacity duration-300">Projects</Link>
+            <Link to="contact" smooth={true} duration={500} className="cursor-pointer opacity-80 hover:opacity-100 transition-opacity duration-300">Contact</Link>
           </div>
         </div>
-
-        {/* Scroll to Top Button */}
-        <Link
-          to="navbar"
-          smooth={true}
-          duration={500}
-          className="absolute -top-16 right-0 w-12 h-12 rounded-full bg-[#cec0a7] text-[#1a1a1a] flex items-center justify-center hover:bg-[#e0e0d8] transition-all duration-300 shadow-lg cursor-pointer"
-          aria-label="Scroll to top"
-        >
-          <FiArrowUp size={20} />
-        </Link>
       </div>
+
+      {/* Scroll to Top Button */}
+      <Link
+        to="navbar"
+        smooth={true}
+        duration={500}
+        offset={-80}
+        className={`fixed bottom-6 right-6 w-12 h-12 rounded-full bg-[#cec0a7] text-[#1a1a1a] flex items-center justify-center hover:bg-[#e0e0d8] transition-all duration-500 shadow-lg cursor-pointer ${
+          showArrow ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4 pointer-events-none"
+        }`}
+        aria-label="Scroll to top"
+      >
+        <FiArrowUp size={20} />
+      </Link>
     </footer>
   );
 };

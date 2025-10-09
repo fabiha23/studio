@@ -6,7 +6,7 @@ const Banner = () => {
   return (
     <section id="banner" className="min-h-[calc(100vh-72px)] text-[#cec0a7] px-6 pt-8 justify-center relative">
       {/* Name with responsive sizing */}
-      <h1 className="font-medium text-8xl md:text-9xl lg:text-[220px] leading-none my-6 bg-gradient-to-t from-black/40 to-[#cec0a7] bg-clip-text text-transparent">
+      <h1 className="font-semibold sm:font-medium text-7xl sm:text-9xl lg:text-[220px] leading-none my-6 bg-gradient-to-t from-black/50 to-[#cec0a7] bg-clip-text text-transparent">
         FABIHA
       </h1>
 

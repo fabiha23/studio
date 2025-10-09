@@ -6,11 +6,12 @@ const Education = () => {
     <section id="education" className="min-h-[calc(100vh-72px)] px-6 text-[#cec0a7]">
       <div className="py-10">
         <div className="mb-10">
-          <h2 className="text-5xl font-bold tracking-tight mb-2">Education</h2>
-          <div className="w-1/2 h-1 bg-gradient-to-r from-[#cec0a7] to-transparent"></div>
+                    <h2 className="text-5xl md:text-6xl font-bold tracking-tight mb-2">Education</h2>
+          <div className="sm:w-1/4 w-1/2 h-1 bg-gradient-to-r from-[#cec0a7] to-transparent"></div>
+
         </div>
 
-        <div className="relative pl-12 border-l border-[#3f3f3f]">
+        <div className="relative pl-4 sm:pl-12 border-l border-[#3f3f3f]">
           <div className="space-y-4">
             <div>
               <h3 className="text-2xl md:text-3xl font-">BSc. in Electrical & Electronics Engineering</h3>
@@ -23,7 +24,7 @@ const Education = () => {
 
             {/* Research Publication */}
            <div className="flex items-start gap-4 p-4 rounded-lg bg-[#1a1a1a]/50 border border-[#3f3f3f] hover:border-[#cec0a7]/50 transition-colors duration-300 group">
-  <div className="p-2 rounded-lg bg-[#cec0a7]/10 group-hover:bg-[#cec0a7]/20 transition-colors duration-300">
+  <div className="p-2 rounded-lg bg-[#cec0a7]/10 group-hover:bg-[#cec0a7]/20 transition-colors duration-300 hidden sm:block">
     <FiBook className="text-[#cec0a7]" size={20} />
   </div>
   <div>

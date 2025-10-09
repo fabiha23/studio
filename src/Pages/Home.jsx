@@ -16,7 +16,7 @@ const Home = () => {
                 <div className='max-w-8xl xl:mx-auto xl:px-9 lg:px-6 mx-3'>
                     <About></About>
                 </div>
-                <div className='max-w-8xl xl:mx-auto xl:px-9 lg:px-6 mx-3'>
+                <div  className='max-w-8xl  xl:mx-auto xl:px-9 lg:px-6 mx-3'>
                     <Skills></Skills>
                 </div>
                 <div className='max-w-8xl xl:mx-auto xl:px-9 lg:px-6 mx-3'>
